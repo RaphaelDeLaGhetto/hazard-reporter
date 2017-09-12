@@ -1,0 +1,56 @@
+body {
+    background-color: #dadada;    
+    margin: 0;
+}
+
+article {
+    background-color: #ffffff;    
+    position: relative;    
+    padding-top: 1em;
+    margin-bottom: 5em;
+    border-bottom: 1px solid gray;
+}
+
+article section img {
+    width: 100%;
+}
+
+.map-icon {
+    background-image: url(http://icon-icons.com/icons2/159/PNG/256/google_location_maps_22371.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    right: 1em;
+    bottom: 2em;
+}
+
+#splash {
+    background-color: #000000;
+    background-image: url(http://www.airemaster.com/wp-content/uploads/2014/06/slip-fall-guy.png);
+    height: 15%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+#splash h1 {
+    color: #ffff00;
+    left: 1em;
+    top: 1em;
+    position: absolute;
+}
+
+@media (min-width: 750px) {
+    article {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+    #splash h1 {
+        position: static;
+    }
+}
