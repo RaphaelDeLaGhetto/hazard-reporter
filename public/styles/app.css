@@ -28,7 +28,7 @@ article section img {
 #splash {
     background-color: #000000;
     background-image: url(http://www.airemaster.com/wp-content/uploads/2014/06/slip-fall-guy.png);
-    height: 15%;
+    height: 15vh;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;

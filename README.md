@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# hazard-reporter
-Hazard Reporter - Lighthouse Labs PT September 2017
-=======
 # Clone this repository into a new workspace
 
 ```
@@ -56,4 +52,3 @@ Seed:
 ```
 bundle exec rake db:seed
 ```
->>>>>>> c9-setup/master

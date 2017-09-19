@@ -1,1 +1,16 @@
-<h1>Hello, world!</h1>
+<% @hazards.each do |hazard| %>
+    <article>
+       <header>
+           <h1><%= hazard[:description] %></h1>
+       </header> 
+       <section>
+          <img src="<%= hazard[:image] %>">
+          <a href="http://google.com/maps/search/<%= hazard[:coordinates] %>" target="_blank">
+              <div class="map-icon"></div>
+          </a>
+       </section>
+       <footer>
+           <h1>Reported <%= hazard[:date_reported] %></h1>
+       </footer>
+    </article>
+<% end %> 
