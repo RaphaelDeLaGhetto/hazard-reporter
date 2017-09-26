@@ -10,7 +10,7 @@
           </a>
        </section>
        <footer>
-           <h1>Reported <%= hazard[:date_reported] %></h1>
+           <h1>Reported by <%= hazard.user.name %> on <%= hazard.humanize_time %></h1>
        </footer>
     </article>
 <% end %> 
