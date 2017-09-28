@@ -7,7 +7,12 @@
   </head>
   <body>
     <header id="splash">
-      <h1>Hazard Reporter</h1>
+      <nav>
+        <% if request.path_info != '/signup' %>
+          <a href="/signup">Sign up</a>
+        <% end %>
+      </nav>
+      <h1><a href="/">Hazard Reporter</a></h1>
     </header>
     <%= yield %>
   </body>
