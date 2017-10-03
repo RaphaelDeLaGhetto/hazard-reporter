@@ -101,7 +101,7 @@ button[type="submit"] {
     border-width: 1px 1px 3px;
 }
 
-section.signup {
+section.auth {
     color: #4f4f4f;
     font-size: 1.5em;
     font-family: sans-serif;
@@ -109,7 +109,7 @@ section.signup {
 }
 
 @media (min-width: 750px) {
-    section.signup {
+    section.auth {
         margin: auto;
         width: 55%;
     }
