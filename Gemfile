@@ -11,6 +11,8 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'tux'
 
+gem 'exifr'
+
 gem 'bcrypt'
 
 group :development, :test do

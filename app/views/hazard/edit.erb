@@ -1,0 +1,21 @@
+<section class="auth">
+  <h1>Post new hazard</h1>
+  <div class="submit-form">
+    <%= erb(:errors, { local: {object: @hazard}}) %>
+    <form action="/hazard/<%= @hazard.id %>" method="post">
+      <input type="hidden" name="_method" value="PUT">
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" name="description" value="<%= @hazard.description %>">
+      </div>
+      <div class="form-group">
+        <button type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+</section>
+<article>
+  <section>
+    <img src="<%= @hazard[:image] %>">
+  </section>
+</article>

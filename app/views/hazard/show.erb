@@ -1,0 +1,29 @@
+<article>
+  <header>
+    <h1><%= @hazard[:description] %></h1>
+  </header> 
+  <section>
+    <img src="<%= @hazard[:image] %>">
+    <a href="http://google.com/maps/search/<%= @hazard[:coordinates] %>" target="_blank">
+      <div class="map-icon"></div>
+    </a>
+  </section>
+  <footer>
+    <h1>Reported by <%= @hazard.user.name %> on <%= @hazard.humanize_time %></h1>
+  </footer>
+</article>
+<section class="update-delete">
+  <div id="edit-button">
+    <a href="/hazard/<%= @hazard.id %>/edit"><button>Edit</button></a>
+  </div>
+  <div id="delete-form">
+    <form action="/hazard/<%= @hazard.id %>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit" value="Delete Hazard?" id="delete"
+             onclick="return confirm('Are you sure you want to delete <%= @hazard.description %>?')">
+        Delete
+      </button>
+    </form>
+  </div>
+
+</section>

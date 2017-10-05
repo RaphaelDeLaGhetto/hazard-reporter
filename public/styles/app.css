@@ -114,3 +114,51 @@ section.auth {
         width: 55%;
     }
 }
+
+/**
+ * New for w5d2
+ */
+#edit-button,
+#post-button {
+  position: relative;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+#edit-button {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;    
+}
+
+#delete-form {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30% 
+}
+
+#delete-form button {
+  background-color: red;
+}
+
+.update-delete {
+  position: relative;    
+  margin-bottom: 2em;
+}
+
+@media (min-width: 750px) {
+    #post-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+    
+    .update-delete {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+}

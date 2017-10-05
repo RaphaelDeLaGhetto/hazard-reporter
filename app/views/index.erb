@@ -1,10 +1,19 @@
+<% if logged_in? %>
+  <div id="post-button">
+    <a href="/hazard/new">
+      <button>Post New Hazard</button>
+    </a>
+  </div>
+<% end %>
 <% @hazards.each do |hazard| %>
     <article>
        <header>
            <h1><%= hazard[:description] %></h1>
        </header> 
        <section>
-          <img src="<%= hazard[:image] %>">
+          <a href="/hazard/<%= hazard.id %>">
+            <img src="<%= hazard[:image] %>">
+          </a>
           <a href="http://google.com/maps/search/<%= hazard[:coordinates] %>" target="_blank">
               <div class="map-icon"></div>
           </a>
