@@ -5,6 +5,25 @@ helpers do
     end
 end
 
+before do
+  if request.path !~ /login/ &&
+     request.path !~ /signup/ &&
+     request.request_method != 'GET'
+     
+    halt(401, erb(:error_401)) unless logged_in? 
+    
+#    if !logged_in? 
+#      halt(401, erb(:error_401))
+#    end
+  end
+end
+
+['/hazard/new', '/hazard/:id/edit'].each do |path|
+  before path do
+    redirect '/login' unless logged_in?
+  end
+end
+
 
 get '/' do
     #@hazards = Hazard.all
@@ -60,7 +79,6 @@ end
 #
 # Get form to create a new hazard in the database
 get '/hazard/new' do
-    puts "HELLO, WORLD!"
     @hazard = Hazard.new
     erb(:'hazard/new')
 end
