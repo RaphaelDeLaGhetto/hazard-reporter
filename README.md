@@ -52,3 +52,62 @@ Seed:
 ```
 bundle exec rake db:seed
 ```
+# Heroku
+
+Deploy to Heroku from scratch...
+
+From the `bash` commandline, install the CLI:
+
+```
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+```
+
+Assuming you've already opened a Heroku account:
+
+```
+heroku login
+heroku create
+```
+
+This will produce to URLs:
+
+1. Your new web address
+2. A git repository
+
+Make note of them both.
+
+Commit any changes:
+
+```
+git commit -am "Get changes"
+```
+
+Push your local repository to Heroku:
+
+```
+git push heroku
+```
+
+Migrate the database.
+
+```
+heroku run bundle exec rake db:migrate
+```
+
+If there are any problems with migrating, try this:
+
+```
+heroku addons:create heroku-postgresql
+```
+
+You can make sure the database has been added to the project like this:
+
+```
+heroku config
+```
+
+### Reset database
+
+```
+heroku pg:reset DATABASE --confirm hazardreporter
+```

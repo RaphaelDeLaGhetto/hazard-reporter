@@ -8,7 +8,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 
-require 'pry'
+#require 'pry'
 require 'exifr/jpeg'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
